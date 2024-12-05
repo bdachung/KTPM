@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-page {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.login-page h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-methods {
+  margin-bottom: 20px;
+}
+
+.auth-methods p {
+  font-size: 14px;
+  color: #666;
+}
+
+.auth-methods ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.auth-methods li {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.phone-login-form,
+.otp-verification-form,
+.email-login-form,
+.social-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone-login-form input,
+.otp-verification-form input,
+.email-login-form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.phone-login-form button,
+.otp-verification-form button,
+.email-login-form button,
+.social-login button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.phone-login-form button:hover,
+.otp-verification-form button:hover,
+.email-login-form button:hover,
+.social-login button:hover {
+  background-color: #0056b3;
+}
+
+#recaptcha-container {
+  margin-bottom: 15px;
+}
+
+.social-login button.facebook {
+  background-color: #3b5998;
+}
+
+.social-login button.facebook:hover {
+  background-color: #2d4373;
+}
+
+.social-login button.github {
+  background-color: #333;
+}
+
+.social-login button.github:hover {
+  background-color: #24292e;
+}
+
+.social-login button.google {
+  background-color: #db4437;
+}
+
+.social-login button.google:hover {
+  background-color: #c23321;
+}
+
+.social-login button.twitter {
+  background-color: #1da1f2;
+}
+
+.social-login button.twitter:hover {
+  background-color: #0d95e8;
+}

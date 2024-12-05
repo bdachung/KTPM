@@ -1,0 +1,85 @@
+.chat-message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+    word-wrap: break-word;
+  }
+  
+  .chat-message.mine {
+    align-self: flex-end;
+    background-color: #dcf8c6; /* Light green background */
+    border: 1px solid #34b7f1; /* Blue border */
+    text-align: right;
+    margin-left: auto; /* Push the message to the right */
+  }
+  
+  .chat-message.theirs {
+    align-self: flex-start;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ccc; /* Grey border */
+    text-align: left;
+    margin-right: auto; /* Push the message to the left */
+  }
+  
+  .message-sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .message-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message-text {
+    margin-bottom: 5px;
+    white-space: pre-wrap; /* Ensure text wraps and preserves whitespace */
+  }
+  
+  .message-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 15px; /* Increase padding for a bigger input field */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px; /* Increase font size */
+    width: calc(100% - 100px); /* Ensure the input is wider than the button */
+  }
+  
+  .chat-input button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100px; /* Set a fixed width for the button */
+  }
+  
+  .chat-input button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .chat-input button:active {
+    background-color: #004494;
+    transform: scale(1);
+  }

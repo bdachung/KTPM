@@ -1,0 +1,12 @@
+.chat-info-panel {
+    background: #f0f2f5;
+    padding: 10px;
+    border-left: 1px solid #ddd;
+  }
+  
+  .info-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
