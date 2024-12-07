@@ -4,24 +4,27 @@
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 10px;
-    max-width: 60%;
+    /* max-width: 30%; */
     word-wrap: break-word;
   }
   
   .chat-message.mine {
-    align-self: flex-end;
-    background-color: #dcf8c6; /* Light green background */
+    /* align-self: flex-end; */
+    background-color: #34b7f1; /* Light green background */
     border: 1px solid #34b7f1; /* Blue border */
     text-align: right;
     margin-left: auto; /* Push the message to the right */
+    width: max-content;
+    color: white; /* White text color */
   }
   
   .chat-message.theirs {
-    align-self: flex-start;
+    /* align-self: flex-start; */
     background-color: #ffffff; /* White background */
     border: 1px solid #ccc; /* Grey border */
     text-align: left;
     margin-right: auto; /* Push the message to the left */
+    width: max-content;
   }
   
   .message-sender {

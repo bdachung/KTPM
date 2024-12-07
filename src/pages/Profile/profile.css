@@ -1,0 +1,394 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .profile-header-container {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+    height: auto;
+  }
+  
+  .profile-cover-image {
+    width: 100%;
+    height: calc(100vw / 6); 
+    overflow: hidden; 
+    position: absolute; 
+  }
+  
+  .profile-cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+  
+  .profile-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .profile-info-text {
+    position: relative;
+    width: calc(100vw * 0.8);
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-avatar-container {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  .profile-avatar {
+    width: 85px !important;
+    height: 85px !important;
+    border: 5px solid white;
+  }
+  
+  .fullname{
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+  
+  .bio {
+    width: 400px;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    color: #414141;
+  }
+  
+  .button-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    gap: 10px;
+  }
+  
+  .edit-button {
+    text-transform: none !important;
+    border-radius: 12px !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+    height: 50px;
+    width: 50px !important;
+    min-width: 50px !important;
+    padding: 0!important;
+    margin: 0 !important;
+    border: 0 !important;
+    background-color: #ffffff !important;
+  
+    border: 1px solid #1976d2 !important;
+  }
+  
+  .edit-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile-button {
+    text-transform: none !important;
+    border-radius: 12px !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    line-height: 21.09px !important;
+    font-family: 'Roboto', sans-serif !important;
+    box-shadow: none !important;
+    height: 50px;
+    min-width: 275px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    background-color: #1976d2 !important;
+    color: white !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .profile-content {
+    width: calc(100vw * 0.8 - 40px);
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0; /* Thêm viền xung quanh */
+    padding: 20px; /* Thêm padding để nội dung không sát viền */
+  }
+  
+  .profile-content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px; /* Thêm khoảng cách dưới tiêu đề */
+    border-bottom: 1px solid #e0e0e0; /* Thêm đường viền ngang dưới tiêu đề */
+  }
+  
+  .profile-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .info-value {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Styles cho Active status (cách cũ) */
+  .status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .status-indicator.online {
+    background-color: #4CAF50;
+  }
+  
+  .status-indicator.offline {
+    background-color: #002ac1;
+  }
+  
+  /* Styles cho Acceptance status (cách mới, phiên bản cập nhật) */
+  .status-indicator.pending,
+  .status-indicator.active {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e8f5e9;
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-size: 14px;
+    color: #4caf50;
+    font-weight: 500;
+    width: auto;
+    height: auto;
+  }
+  
+  .status-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  
+  .status-button .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .status-button.online {
+    background-color: #e8f5e9;
+    color: #4caf50;
+  }
+  
+  .status-button.online .status-dot {
+    background-color: #4caf50;
+  }
+  
+  .status-button.accepted {
+    background-color: #e8f5e9;
+    color: #25A55E;
+    ;
+  }
+  
+  .status-button.accepted .status-dot {
+    background-color: #25A55E;
+    ;
+  }
+  
+  .image-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .image-placeholder {
+    width: 240px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+  
+  .image-placeholder {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Đặt ảnh ở giữa màn hình */
+    max-width: 80%; /* Giới hạn chiều rộng tối đa */
+    max-height: 80%; /* Giới hạn chiều cao tối đa */
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Làm mờ nền khi zoom */
+    z-index: 999; /* Đảm bảo overlay nằm dưới ảnh nhưng trên nội dung khác */
+  }
+  
+  .status-button.offline {
+    background-color: #ffcccb;
+    color: #ff0000;
+  }
+  
+  .status-button.offline .status-dot {
+    background-color: #ff0000;
+  }
+  
+  .status-button.rejected {
+    background-color: #ffcccb;
+    color: #ff0000;
+  }
+  
+  .status-button.rejected .status-dot {
+    background-color: #ff0000;
+  }
+  
+  .status-button.pending {
+    background-color: #fff3cd;
+    color: #ffa500;
+  }
+  
+  .status-button.pending .status-dot {
+    background-color: #ffa500;
+  }
+  
+  .rejection-reason {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff5f5;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1);
+  }
+  
+  .rejection-reason h3 {
+    color: #d32f2f;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .rejection-content {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .rejection-content i {
+    color: #d32f2f;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+  
+  .rejection-content p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .status-update-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .status-change-button {
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .status-change-button:hover {
+    background-color: #1565c0;
+  }
+  
+  .dropzone-container {
+    padding: 20px;
+  }
+  
+  .dropzone {
+    border: 2px dashed #cccccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .dropzone:hover {
+    border-color: #1976d2;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+  }
+  
+  

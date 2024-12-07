@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth, signInWithPopup, signInWithEmailAndPassword, signInWithCredential, facebookProvider, githubProvider, googleProvider, twitterProvider, RecaptchaVerifier, PhoneAuthProvider, signInWithPhoneNumber } from '../../components/firebase'; // Adjust the import path as needed
 import './LoginPage.css'; // Import the CSS file
@@ -21,7 +21,14 @@ function LoginPage({ onLogin }) {
   const [otp, setOtp] = useState('');
   const [verificationId, setVerificationId] = useState(null);
   const navigate = useNavigate();
-  const {setAccessToken} = useAuth();
+  const {accessToken, setAccessToken, username, setUsername} = useAuth();
+
+  useEffect(() => {
+    if (accessToken && username) {
+      navigate('/chat');
+      return;
+    }
+  }, [accessToken, navigate]);
 
   const handlePhoneLogin = async (e) => {
     e.preventDefault();
@@ -53,7 +60,9 @@ function LoginPage({ onLogin }) {
             deviceId: "default"
         });
         
-        setAccessToken(response.data.accessToken);
+        console.log(response.data);
+        setAccessToken(response.data.accesskey);
+        setUsername(user.phoneNumber.replace("+84", "0"));
         
         toast.success('Login successful');
 

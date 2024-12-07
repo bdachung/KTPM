@@ -1,0 +1,116 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .modal-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    right: 0;
+    position: absolute;
+    z-index: 5;
+    color: #fff;
+  }
+  
+  .modal-body {
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+  
+.profileModal.profile-cover-image {
+  border-radius: 16px;
+  width: 640px;
+  max-width: 100%;
+  margin-bottom: -50px;
+  position: relative;
+  height: 160px;
+  img {
+    object-position: center 56%;
+    scale: 1.5;
+    position: unset;
+    transform: none;
+  }
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 30px;
+  }
+  
+  .profile-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-form .form-group label {
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-align: left;
+  }
+  
+  .profile-form .form-group input,
+  .profile-form .form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    height: 20px;
+  }
+  
+  .profile-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+  }
+
+.profile-form button.submit {
+  background-color: #007bff;
+  color: white;
+}
+
+.profile-form button.cancel {
+  background-color: #fff;
+  color: red;
+  border: 1px solid red;
+}
+
+.profile-form button.cancel:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.profile-form button.submit:hover {
+  background-color: #0056b3;
+}

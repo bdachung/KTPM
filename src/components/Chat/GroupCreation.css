@@ -1,0 +1,142 @@
+.group-creation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .group-creation-modal-content {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 40%; /* Increase the width to make the modal wider */
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .group-creation-modal-content input {
+    width: 90%; /* Increase the width of the input fields */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-results {
+    width: 90%; /* Increase the width of the search results */
+    height: 40vh;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-result-item {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-result-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .user-info {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .username {
+    font-weight: bold;
+  }
+  
+  .role {
+    color: #888;
+  }
+  
+  .add-member {
+    width: 94%; /* Increase the width of the search results */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* margin-bottom: 10px; */
+  }
+
+  .add-member input{
+    width: 94%; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .add-member button {
+    /* padding: 10px 20px; */
+    margin: 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .selected-members {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; /* Increase the width of the selected members container */
+    margin-bottom: 10px;
+  }
+  
+  .selected-member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px; /* Reduce padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 28%; /* Adjust width to fit 4 items per row with some spacing */
+    margin-right: 2%; /* Add some spacing between items */
+    font-size: 0.8em; /* Reduce font size */
+  }
+  
+  .selected-member-item:nth-child(3n) {
+    margin-right: 0; /* Remove right margin for the last item in each row */
+  }
+  
+  .selected-member-item button {
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em; /* Reduce font size */
+  }
+  
+  .selected-member-item button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  .group-creation-modal-content button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .group-creation-modal-content button:hover {
+    background-color: #0056b3;
+  }

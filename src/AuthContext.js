@@ -15,6 +15,11 @@ export const AuthProvider = ({ children }) => {
         return localStorage.getItem('refreshToken') || null;
     });
 
+    const [username, setUsername] = useState(() => {
+        // Lấy username từ localStorage nếu có
+        return localStorage.getItem('username') || null;
+    });
+
     // Lưu accessToken vào localStorage khi nó thay đổi
     useEffect(() => {
         if (accessToken) {
@@ -33,8 +38,17 @@ export const AuthProvider = ({ children }) => {
         }
     }, [refreshToken]);
 
+    // Save username to localStorage when it changes
+    useEffect(() => {
+        if (username) {
+            localStorage.setItem('username', username);
+        } else {
+            localStorage.removeItem('username');
+        }
+    }, [username]);
+
     return (
-        <AuthContext.Provider value={{ accessToken, setAccessToken, refreshToken, setRefreshToken }}>
+        <AuthContext.Provider value={{ accessToken, setAccessToken, refreshToken, setRefreshToken, username, setUsername }}>
             {children}
         </AuthContext.Provider>
     );
